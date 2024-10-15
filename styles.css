@@ -1,0 +1,461 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 15px;  /* Added padding */
+    padding-right: 15px; /* Added padding */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Header Styles */
+header {
+    background-color: #ffffff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+    display: block; /* This ensures the image is treated as a block element */
+}
+
+/* Navigation Styles */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #0c229a;
+}
+
+/* Contact Link Styled as Button within Nav */
+.contact-link {
+    color: #ffffff;
+    background-color: #0c229a;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.contact-link:hover {
+    background-color: #fff;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+}
+
+.hamburger .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* CTA Button Styles */
+.cta-button {
+    background-color: #0c229a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #091b7a;
+}
+
+/* Section-specific CTA Button Styles */
+.service-section .cta-button {
+    background-color: #0c229a;
+}
+
+.service-section .cta-button:hover {
+    background-color: #091b7a;
+}
+
+.process-section .cta-button {
+    background-color: #38c2cd;
+}
+
+.process-section .cta-button:hover {
+    background-color: #2fa5ad;
+}
+
+.feature-section .cta-button {
+    background-color: #cf55c6;
+}
+
+.feature-section .cta-button:hover {
+    background-color: #b844af;
+}
+
+.track-record-section .cta-button {
+    background-color: #0c229a;
+}
+
+.track-record-section .cta-button:hover {
+    background-color: #091b7a;
+}
+
+.qna-section .cta-button {
+    background-color: #1371f1;
+}
+
+.qna-section .cta-button:hover {
+    background-color: #115dc7;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+section:first-of-type {
+    padding-top: 140px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0066cc;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+}
+
+.banner-image {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-list, .feature-list, .process-list, .achievement-list, .qna-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.service-item, .feature-item, .process-item, .achievement-item, .qna-item {
+    flex: 1;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover, .feature-item:hover, .process-item:hover, .achievement-item:hover, .qna-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon, .feature-icon, .process-icon, .achievement-number, .qna-number {
+    font-size: 32px;
+    color: #0066cc;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.qna-number {
+    color: #1371f1;
+}
+
+.service-item h3, .feature-item h3, .process-item h3, .achievement-item h3, .qna-item h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #4a4a4a;
+}
+
+.service-item p, .feature-item p, .process-item p, .achievement-item p, .qna-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+section .cta-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+}
+
+/* Specific Section Styles */
+.service-section {
+    background-color: #fff;
+}
+
+.service-section h2,
+.service-section .service-icon {
+    color: #0c229a;
+}
+
+.feature-section {
+    background-color: #fff;
+}
+
+.feature-section h2,
+.feature-section .feature-icon {
+    color: #cf55c6;
+}
+
+.process-section {
+    background-color: #fff;
+}
+
+.process-section h2,
+.process-section .process-icon {
+    color: #38c2cd;
+}
+
+.track-record-section {
+    background-color: #fff;
+}
+
+.track-record-section h2,
+.track-record-section .achievement-number {
+    color: #0c229a;
+}
+
+/* Q&A Section Styles */
+.qna-section {
+    background-color: #fff;
+}
+
+.qna-section h2 {
+    color: #1371f1;
+}
+
+.qna-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+    gap: 20px;
+}
+
+.qna-item {
+    flex: 1; 
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.qna-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(19, 113, 241, 0.2);
+}
+
+.qna-number {
+    font-size: 32px;
+    color: #1371f1;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.qna-item h3 {
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #4a4a4a;
+}
+
+.qna-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .service-list, .feature-list, .process-list, .achievement-list, .qna-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item, .feature-item, .process-item, .achievement-item, .qna-item {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav.active {
+        max-height: 600px;
+    }
+
+    .header-right {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    nav ul li .contact-link {
+        background-color: #0c229a;
+        color: #ffffff;
+        padding: 10px 20px;
+        border-radius: 30px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav ul li .contact-link:hover {
+        background-color: #fff;
+    }
+
+    header .container {
+        padding: 10px 15px;
+    }
+    
+    .logo img {
+        height: 35px; /* Slightly reduce logo size on smaller screens if needed */
+    }
+
+    section:first-of-type {
+        padding-top: 100px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .section-intro {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .section-cta {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        border-radius: 25px;
+    }
+
+    nav ul li .contact-link {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+
+/* Fix for header scroll on iPhone */
+@supports (-webkit-touch-callout: none) {
+    /* CSS specific to iOS devices */
+    header {
+        position: fixed;
+        -webkit-transform: translateZ(0);
+    }
+}
