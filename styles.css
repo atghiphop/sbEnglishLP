@@ -183,7 +183,7 @@ section h2 {
 
 .section-intro {
     text-align: center;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto 30px;
     font-size: 18px;
 }
@@ -246,7 +246,7 @@ section h2 {
 
 section .cta-button {
     display: block;
-    width: 200px;
+    width: 300px;
     margin: 20px auto 0;
     text-align: center;
 }
