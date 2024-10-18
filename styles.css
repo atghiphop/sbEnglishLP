@@ -11,9 +11,9 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 15px;  /* Added padding */
-    padding-right: 15px; /* Added padding */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
 }
 
 /* Header Styles */
@@ -43,7 +43,7 @@ header .container {
 .logo img {
     height: 40px;
     width: auto;
-    display: block; /* This ensures the image is treated as a block element */
+    display: block;
 }
 
 /* Navigation Styles */
@@ -82,7 +82,8 @@ nav ul li a:hover {
 }
 
 .contact-link:hover {
-    background-color: #fff;
+    background-color: #091b7a;
+    color: #ffffff;
 }
 
 /* Hamburger Menu Styles */
@@ -117,7 +118,10 @@ nav ul li a:hover {
     font-weight: 500;
     font-size: 16px;
     transition: background-color 0.3s ease;
-    display: inline-block;
+    display: block;
+    width: 300px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .cta-button:hover {
@@ -167,11 +171,11 @@ nav ul li a:hover {
 
 /* Section Styles */
 section {
-    padding: 80px 0;
+    padding: 20px 0;
 }
 
 section:first-of-type {
-    padding-top: 140px;
+    padding-top: 80px;
 }
 
 section h2 {
@@ -181,7 +185,8 @@ section h2 {
     color: #0066cc;
 }
 
-.section-intro {
+.section-intro,
+.direct-email {
     text-align: center;
     max-width: 900px;
     margin: 0 auto 30px;
@@ -244,13 +249,6 @@ section h2 {
     line-height: 1.5;
 }
 
-section .cta-button {
-    display: block;
-    width: 300px;
-    margin: 20px auto 0;
-    text-align: center;
-}
-
 /* Specific Section Styles */
 .service-section {
     background-color: #fff;
@@ -297,14 +295,6 @@ section .cta-button {
     color: #1371f1;
 }
 
-.qna-list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
-    margin-bottom: 30px;
-    gap: 20px;
-}
-
 .qna-item {
     flex: 1; 
     margin-bottom: 20px;
@@ -318,24 +308,6 @@ section .cta-button {
 .qna-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(19, 113, 241, 0.2);
-}
-
-.qna-number {
-    font-size: 32px;
-    color: #1371f1;
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.qna-item h3 {
-    font-size: 18px;
-    margin-bottom: 12px;
-    color: #4a4a4a;
-}
-
-.qna-item p {
-    font-size: 14px;
-    line-height: 1.5;
 }
 
 /* Responsive Styles */
@@ -400,7 +372,7 @@ section .cta-button {
     }
 
     nav ul li .contact-link:hover {
-        background-color: #fff;
+        background-color: #091b7a;
     }
 
     header .container {
@@ -408,15 +380,15 @@ section .cta-button {
     }
     
     .logo img {
-        height: 35px; /* Slightly reduce logo size on smaller screens if needed */
+        height: 35px;
     }
 
     section:first-of-type {
-        padding-top: 100px;
+        padding-top: 60px;
     }
 
     section {
-        padding: 60px 0;
+        padding: 20px 0;
     }
 
     section h2 {
@@ -429,16 +401,19 @@ section .cta-button {
 }
 
 @media (max-width: 480px) {
-    .cta-button {
-        width: 100%;
-        text-align: center;
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
-    .section-cta {
+    .cta-button {
         width: 100%;
-        padding: 12px 0;
+        max-width: 300px;
+        margin: 20px auto;
+        padding: 12px 24px;
         font-size: 16px;
         border-radius: 25px;
+        box-sizing: border-box;
     }
 
     nav ul li .contact-link {
@@ -453,7 +428,6 @@ section .cta-button {
 
 /* Fix for header scroll on iPhone */
 @supports (-webkit-touch-callout: none) {
-    /* CSS specific to iOS devices */
     header {
         position: fixed;
         -webkit-transform: translateZ(0);
