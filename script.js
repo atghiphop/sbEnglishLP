@@ -1,6 +1,12 @@
 // Smooth Scrolling for Navigation Links
 document.querySelectorAll('nav a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
+        // Check if this is a mailto link
+        if (this.getAttribute('data-mailto') === 'true') {
+            // Allow the default behavior for mailto links
+            return;
+        }
+
         e.preventDefault();
         const targetId = this.getAttribute('href');
         const targetSection = document.querySelector(targetId);
